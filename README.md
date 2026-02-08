@@ -1,30 +1,3 @@
-Healthcare Interoperability & Morbidity Code Mapping System
-
-Bridging Traditional Indian Medicine with Global Healthcare Standards using FHIR & ICD-11
-
-📖 About the Project
-
-NAMASTE is a healthcare interoperability project designed to integrate and map morbidity codes from AYUSH systems (Ayurveda, Siddha, Unani) with international disease classification standards like ICD-11.
-
-The system processes healthcare datasets, generates FHIR resources, and enables intelligent disease code matching for research, analytics, and digital health applications.
-
-🎯 Key Objectives
-
-🔗 Enable interoperability between traditional & modern medicine
-
-🧾 Digitize AYUSH morbidity classifications
-
-🔍 Provide disease search & code mapping
-
-🧠 Build intelligent ICD ↔ NAMASTE match logic
-
-📊 Generate FHIR-compatible healthcare datasets
-
-🏗
-i want as a copyable text
-
-Perfect 👍 — here is your GitHub README.md as fully copyable text (no formatting blocks, just paste directly into README.md on GitHub).
-
 🌿 NAMASTE
 
 Healthcare Interoperability & Morbidity Code Mapping System
@@ -151,7 +124,7 @@ FHIR Healthcare Standard
 
 Clone the repository
 
-git clone https://github.com/your-username/namaste.git
+git clone https://github.com/Dharani290
 
 Navigate to project folder
 
