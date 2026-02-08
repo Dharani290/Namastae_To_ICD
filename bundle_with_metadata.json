@@ -1,0 +1,43 @@
+{
+  "abhaId": "ABHA1234567890",
+  "consentVersion": "v1.2",
+  "sourceSystem": "EMR-X",
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }] },
+        "verificationStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "confirmed" }] },
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-category", "code": "problem-list-item" }] }],
+        "code": {
+          "coding": [
+            { "system": "https://namaste.gov.in/codes", "code": "AAB-39(SP1Y)", "display": "Breaking pain of knees disorder" },
+            { "system": "http://id.who.int/icd", "code": "http://id.who.int/icd/entity/396939646", "display": "Inflammatory arthropathies" },
+            { "system": "https://namaste.gov.in/tm2", "code": "Breaking pain of knees disorder (TM2) ⇒" }
+          ]
+        },
+        "recordedDate": "2025-09-30",
+        "note": [{ "text": "Confidence: 0.43" }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "clinicalStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }] },
+        "verificationStatus": { "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "confirmed" }] },
+        "category": [{ "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-category", "code": "problem-list-item" }] }],
+        "code": {
+          "coding": [
+            { "system": "https://namaste.gov.in/codes", "code": "AAB-91(SQ04)", "display": "Transient depression disorder" },
+            { "system": "http://id.who.int/icd", "code": "http://id.who.int/icd/entity/1563440232", "display": "Depressive disorders" },
+            { "system": "https://namaste.gov.in/tm2", "code": "Transient depression disorder (TM2) ⇒" }
+          ]
+        },
+        "recordedDate": "2025-09-30",
+        "note": [{ "text": "Confidence: 0.40" }]
+      }
+    }
+  ]
+}

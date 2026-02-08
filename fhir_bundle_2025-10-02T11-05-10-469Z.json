@@ -1,0 +1,47 @@
+{
+  "abhaId": "ABHA1234567890",
+  "consentVersion": "v1.2",
+  "sourceSystem": "EMR-X",
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "code": {
+          "coding": [
+            {
+              "system": "NAMASTE",
+              "code": "N15",
+              "display": "Madhumeha (Diabetes)"
+            },
+            {
+              "system": "ICD11",
+              "code": "B54",
+              "display": "Diabetes Mellitus"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "code": {
+          "coding": [
+            {
+              "system": "NAMASTE",
+              "code": "N16",
+              "display": "Anemia"
+            },
+            {
+              "system": "ICD11",
+              "code": "3A70.1",
+              "display": "Acquired Aplastic Anemia"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bundle Validator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c;
+      color: #e0e0e0;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #81c784;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    input, button {
+      padding: 0.75rem;
+      margin: 1rem auto;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #555;
+      width: 80%;
+      max-width: 500px;
+      display: block;
+      background-color: #2e2e2e;
+      color: #e0e0e0;
+    }
+
+    button {
+      background-color: #4caf50;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    pre {
+      background-color: #2e2e2e;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      color: #81c784;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>📦 Bundle Validator</h2>
+  <input type="file" id="bundleFile" />
+  <input type="text" id="abhaToken" placeholder="Enter ABHA token" />
+  <button onclick="uploadBundle()">Upload</button>
+  <pre id="uploadStatus">Upload status will appear here...</pre>
+  <a href="index.html">← Back to Home</a>
+
+  <script>
+    function uploadBundle() {
+      const file = document.getElementById('bundleFile').files[0];
+      const token = document.getElementById('abhaToken').value;
+      const statusBox = document.getElementById('uploadStatus');
+
+      if (!file || !token) {
+        statusBox.textContent = "⚠️ Please select a file and enter ABHA token.";
+        return;
+      }
+
+      statusBox.textContent = "📤 Uploading bundle...";
+
+      const reader = new FileReader();
+      reader.onload = function() {
+        fetch('/api/fhir/upload', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: reader.result
+        })
+        .then(res => res.text())
+        .then(data => {
+          statusBox.textContent = `✅ Upload successful:\n${data}`;
+        })
+        .catch(err => {
+          statusBox.textContent = "❌ Upload failed.";
+          console.error("Upload error:", err);
+        });
+      };
+      reader.readAsText(file);
+    }
+  </script>
+</body>
+</html>

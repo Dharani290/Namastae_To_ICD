@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mapping Explorer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c;
+      color: #e0e0e0;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #81c784;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    input, button {
+      padding: 0.75rem;
+      margin: 1rem auto;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #555;
+      width: 80%;
+      max-width: 500px;
+      display: block;
+      background-color: #2e2e2e;
+      color: #e0e0e0;
+    }
+
+    button {
+      background-color: #4caf50;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    pre {
+      background-color: #2e2e2e;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      color: #81c784;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>📊 Mapping Explorer</h2>
+  <input type="text" id="conceptSearch" placeholder="Search NAMASTE term or code" />
+  <button onclick="loadConceptMap()">Load ConceptMap</button>
+  <pre id="conceptMap">ConceptMap will appear here...</pre>
+  <a href="index.html">← Back to Home</a>
+
+  <script>
+    function loadConceptMap() {
+      const mapBox = document.getElementById('conceptMap');
+      const query = document.getElementById('conceptSearch')?.value?.toLowerCase() || "";
+      mapBox.textContent = "🗺️ Loading ConceptMap...";
+
+      fetch('/api/conceptmap')
+        .then(res => res.json())
+        .then(data => {
+          if (!data.group || !Array.isArray(data.group) || data.group.length === 0) {
+            mapBox.textContent = "❌ No ConceptMap data found.";
+            return;
+          }
+
+          let output = "";
+          data.group.forEach((group, i) => {
+            const source = group.source || "Unknown Source";
+            const target = group.target || "Unknown Target";
+            let groupOutput = `🔗 Group ${i + 1}: ${source} → ${target}\n`;
+
+            let matchCount = 0;
+            if (Array.isArray(group.element)) {
+              group.element.forEach((el, j) => {
+                const sourceCode = el.code || "";
+                const sourceDisplay = el.display || "";
+                const targetObj = el.target?.[0] || {};
+                const icdUri = targetObj.code || "N/A";
+                const icdCode = icdUri.split('/').pop();
+                const targetDisplay = targetObj.display || "ICD Term";
+                const equivalence = targetObj.equivalence || "unspecified";
+
+                const matchText = `${sourceCode} ${sourceDisplay}`.toLowerCase();
+                if (!query || matchText.includes(query)) {
+                  matchCount++;
+                  groupOutput += `  ${matchCount}. ${sourceCode} - ${sourceDisplay} → ${icdCode} (${targetDisplay}) (${equivalence})\n`;
+                 
+                }
+              });
+            }
+
+            if (matchCount > 0) {
+              output += groupOutput + "\n";
+            }
+          });
+
+          mapBox.textContent = output || "❌ No matches found for your search.";
+        })
+        .catch(err => {
+          mapBox.textContent = "⚠️ Error loading ConceptMap.";
+          console.error("ConceptMap fetch error:", err);
+        });
+    }
+  </script>
+</body>
+</html>

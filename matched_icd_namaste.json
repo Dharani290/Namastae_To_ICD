@@ -1,0 +1,72 @@
+[
+  {
+    "ICD11_Title": "Anaemias or other erythrocyte disorders",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/224336967",
+    "NAMC_CODE": "ABB-1(SK7Y)",
+    "TM2_Label": "Bloodshot eye disorder (TM2) ⇒",
+    "Confidence": 0.36
+  },
+  {
+    "ICD11_Title": "Inflammatory arthropathies",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/396939646",
+    "NAMC_CODE": "AAB-39(SP1Y)",
+    "TM2_Label": "Breaking pain of knees disorder (TM2) ⇒",
+    "Confidence": 0.4
+  },
+  {
+    "ICD11_Title": "<em class='found'>Asthma</em>",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/1656445230",
+    "NAMC_CODE": "EA-4.5.1(SL40)",
+    "TM2_Label": "Bronchial asthma with fever, fainting disorder (TM2) ⇒",
+    "Confidence": 0.44
+  },
+  {
+    "ICD11_Title": "<em class='found'>Depressive</em> disorders",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/1563440232",
+    "NAMC_CODE": "AAB-91(SQ04)",
+    "TM2_Label": "Transient depression disorder (TM2) ⇒",
+    "Confidence": 0.43
+  },
+  {
+    "ICD11_Title": "<em class='found'>Diabetes</em> mellitus, type unspecified",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/1697306310",
+    "NAMC_CODE": "DIS",
+    "TM2_Label": "disease/disorder",
+    "Confidence": 0.41
+  },
+  {
+    "ICD11_Title": "<em class='found'>Epilepsy</em> or seizures",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/1397288146",
+    "NAMC_CODE": "SK30(AAC-11)",
+    "TM2_Label": "Seizure disorder (TM2)",
+    "Confidence": 0.41
+  },
+  {
+    "ICD11_Title": "Certain specified inflammatory liver diseases",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/2046015098",
+    "NAMC_CODE": "ABB-13",
+    "TM2_Label": "jaundice (due only to pittadōṣa)",
+    "Confidence": 0.37
+  },
+  {
+    "ICD11_Title": "Essential <em class='found'>hypertension</em>",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/761947693",
+    "NAMC_CODE": "SL72(ACB-17)",
+    "TM2_Label": "Thickened arteries disorder (TM2)",
+    "Confidence": 0.44
+  },
+  {
+    "ICD11_Title": "<em class='found'>Malaria</em>",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/1439886552",
+    "NAMC_CODE": "ACB",
+    "TM2_Label": "diseases due to only ślēṣma",
+    "Confidence": 0.27
+  },
+  {
+    "ICD11_Title": "<em class='found'>Tuberculosis</em>",
+    "ICD11_Entity_ID": "http://id.who.int/icd/entity/2072728114",
+    "NAMC_CODE": "ABB-13",
+    "TM2_Label": "jaundice (due only to pittadōṣa)",
+    "Confidence": 0.31
+  }
+]

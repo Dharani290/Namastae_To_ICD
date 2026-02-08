@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Code Lookup</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c;
+      color: #e0e0e0;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #81c784;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    input, button {
+      padding: 0.75rem;
+      margin: 1rem auto;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #555;
+      width: 80%;
+      max-width: 500px;
+      display: block;
+      background-color: #2e2e2e;
+      color: #e0e0e0;
+    }
+
+    button {
+      background-color: #4caf50;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    pre {
+      background-color: #2e2e2e;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      color: #81c784;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔍 Code Lookup</h2>
+  <input type="text" id="searchBox" placeholder="Enter NAMASTE code or term" />
+  <button onclick="search()">Search</button>
+  <pre id="searchResults">Results will appear here...</pre>
+  <a href="index.html">← Back to Home</a>
+
+  <script>
+    function search() {
+      const code = document.getElementById('searchBox').value;
+      const resultsBox = document.getElementById('searchResults');
+      resultsBox.textContent = "🔍 Searching...";
+
+      fetch(`/api/search?code=${encodeURIComponent(code)}`)
+        .then(res => res.json())
+        .then(data => {
+          if (!Array.isArray(data) || data.length === 0) {
+            resultsBox.textContent = "❌ No matches found.";
+            return;
+          }
+
+          let output = "";
+          data.forEach((item, index) => {
+            const namasteCode = item.namaste_code || "N/A";
+            const namasteTerm = item.namaste_term || "NAMASTE Code";
+            const icdUri = item.icd_code || "N/A";
+            const icdCode = icdUri.split('/').pop();
+            const icdTerm = item.icd_term || "ICD Term";
+            const tm2Label = item.tm2_label || "N/A";
+            const noteText = item.confidence_note || "";
+            const confidenceMatch = noteText.match(/Confidence[:：]?\s*([\d.]+)/);
+            const confidence = confidenceMatch ? parseFloat(confidenceMatch[1]) : 0;
+
+            output += `🩺 Match ${index + 1}\n`;
+            output += `NAMASTE: ${namasteCode} - ${namasteTerm}\n`;
+            output += `ICD-11: ${icdCode} - ${icdTerm}\n`;
+            output += `TM2 Label: ${tm2Label}\n`;
+            output += `Confidence: ${confidence}\n\n`;
+          });
+
+          resultsBox.textContent = output;
+        })
+        .catch(err => {
+          resultsBox.textContent = "⚠️ Error fetching results.";
+          console.error("Search fetch error:", err);
+        });
+    }
+  </script>
+</body>
+</html>

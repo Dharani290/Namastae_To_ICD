@@ -1,0 +1,612 @@
+[
+  {
+    "resourceType": "Condition",
+    "id": "0a1cb263-a7d8-4af7-9a64-583631f211d8",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/224336967",
+          "display": "Anaemias or other erythrocyte disorders"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "ABB-1(SK7Y)",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "Bloodshot eye disorder (TM2) ⇒",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code ABB-1(SK7Y) with TM2 label 'Bloodshot eye disorder (TM2) ⇒'. Confidence: 0.36"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "b9e35141-a743-4a47-b652-47714a9b3b27",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/396939646",
+          "display": "Inflammatory arthropathies"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "AAB-39(SP1Y)",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "Breaking pain of knees disorder (TM2) ⇒",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code AAB-39(SP1Y) with TM2 label 'Breaking pain of knees disorder (TM2) ⇒'. Confidence: 0.4"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "05639b98-d24a-4b2f-a29d-2062484b06c7",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/1656445230",
+          "display": "<em class='found'>Asthma</em>"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "EA-4.5.1(SL40)",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "Bronchial asthma with fever, fainting disorder (TM2) ⇒",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code EA-4.5.1(SL40) with TM2 label 'Bronchial asthma with fever, fainting disorder (TM2) ⇒'. Confidence: 0.44"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "36a7e393-70b5-4c04-bf21-37197a2cd110",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/1563440232",
+          "display": "<em class='found'>Depressive</em> disorders"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "AAB-91(SQ04)",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "Transient depression disorder (TM2) ⇒",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code AAB-91(SQ04) with TM2 label 'Transient depression disorder (TM2) ⇒'. Confidence: 0.43"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "c10f3667-dc7b-42c0-abe2-38b466302d63",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/1697306310",
+          "display": "<em class='found'>Diabetes</em> mellitus, type unspecified"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "DIS",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "disease/disorder",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code DIS with TM2 label 'disease/disorder'. Confidence: 0.41"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "cdd4aa0b-0c48-46e9-a4b0-9d6e34230b03",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/1397288146",
+          "display": "<em class='found'>Epilepsy</em> or seizures"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "SK30(AAC-11)",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "Seizure disorder (TM2)",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code SK30(AAC-11) with TM2 label 'Seizure disorder (TM2)'. Confidence: 0.41"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "735b7d6b-0316-4c99-bc35-f9c1f60095b6",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/2046015098",
+          "display": "Certain specified inflammatory liver diseases"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "ABB-13",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "jaundice (due only to pittadōṣa)",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code ABB-13 with TM2 label 'jaundice (due only to pittadōṣa)'. Confidence: 0.37"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "4d0d2972-483c-4f49-ad29-bdbf18bf5ae2",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/761947693",
+          "display": "Essential <em class='found'>hypertension</em>"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "SL72(ACB-17)",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "Thickened arteries disorder (TM2)",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code SL72(ACB-17) with TM2 label 'Thickened arteries disorder (TM2)'. Confidence: 0.44"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "ac4ca365-4ca7-48d4-bea9-20065efec9b3",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/1439886552",
+          "display": "<em class='found'>Malaria</em>"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "ACB",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "diseases due to only ślēṣma",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code ACB with TM2 label 'diseases due to only ślēṣma'. Confidence: 0.27"
+      }
+    ]
+  },
+  {
+    "resourceType": "Condition",
+    "id": "b8f1767d-ff9b-4bf4-971d-699f4600c06b",
+    "clinicalStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active",
+          "display": "Active"
+        }
+      ]
+    },
+    "verificationStatus": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed",
+          "display": "Confirmed"
+        }
+      ]
+    },
+    "category": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code": "problem-list-item",
+            "display": "Problem List Item"
+          }
+        ]
+      }
+    ],
+    "code": {
+      "coding": [
+        {
+          "system": "http://id.who.int/icd",
+          "code": "http://id.who.int/icd/entity/2072728114",
+          "display": "<em class='found'>Tuberculosis</em>"
+        },
+        {
+          "system": "https://namaste.gov.in/codes",
+          "code": "ABB-13",
+          "display": "NAMASTE Code"
+        },
+        {
+          "system": "https://namaste.gov.in/tm2",
+          "code": "jaundice (due only to pittadōṣa)",
+          "display": "TM2 Label"
+        }
+      ]
+    },
+    "subject": {
+      "reference": "Patient/example"
+    },
+    "recordedDate": "2025-09-30T12:17:23.632271",
+    "note": [
+      {
+        "text": "Mapped from ICD-11 to NAMASTE code ABB-13 with TM2 label 'jaundice (due only to pittadōṣa)'. Confidence: 0.31"
+      }
+    ]
+  }
+]

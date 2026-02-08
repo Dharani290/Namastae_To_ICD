@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clinical Terminology Mapping Suite</title>
+  <style>
+    :root {
+      --bg-dark: #1c1c1c;
+      --card-dark: #2e2e2e;
+      --text-light: #e0e0e0;
+      --green-main: #4caf50;
+      --green-accent: #81c784;
+      --green-deep: #2e7d32;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      color: var(--green-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #b0bec5;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+
+    .card {
+      background-color: var(--card-dark);
+      border-left: 6px solid var(--green-main);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: var(--text-light);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      color: var(--green-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #cfd8dc;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #9e9e9e;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .card-grid {
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧠 Clinical Terminology Mapping Suite</h1>
+    <p>Standardize, Validate & Visualize ICD-11 Mappings from FHIR Resources</p>
+  </header>
+
+  <div class="card-grid">
+    <a href="search.html" class="card">
+      <h2>🧾 Code Lookup</h2>
+      <p>Search clinical terms and retrieve ICD-11 mappings instantly</p>
+    </a>
+    <a href="upload.html" class="card">
+      <h2>📦 Bundle Validator</h2>
+      <p>Upload and validate your FHIR bundles for mapping compliance</p>
+    </a>
+    <a href="conceptmap.html" class="card">
+      <h2>📊 Mapping Explorer</h2>
+      <p>Visualize relationships and mapped concepts across terminologies</p>
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2025 Clinical Mapping Suite. Powered by NAMASTE Framework.
+  </footer>
+</body>
+</html>
